@@ -1,0 +1,12 @@
+# Nexys 3 (Spartan-6 XC6SLX16 CSG324)
+# Reloj de 100 MHz
+NET "clk" LOC = V10 | IOSTANDARD = LVCMOS33;
+NET "clk" TNM_NET = clk_pin;
+TIMESPEC TS_clk_pin = PERIOD clk_pin 100 MHz HIGH 50%;
+# Switches
+NET "x"     LOC = T10 | IOSTANDARD = LVCMOS33;  # SW0
+NET "reset" LOC = T5  | IOSTANDARD = LVCMOS33;  # SW7
+# LEDs
+NET "salida<0>" LOC = U16 | IOSTANDARD = LVCMOS33;  # LD0
+NET "salida<1>" LOC = V16 | IOSTANDARD = LVCMOS33;  # LD1
+NET "salida<2>" LOC = U15 | IOSTANDARD = LVCMOS33;  # LD2
